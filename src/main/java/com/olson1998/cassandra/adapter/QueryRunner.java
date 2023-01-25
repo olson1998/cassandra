@@ -16,9 +16,9 @@ public abstract class QueryRunner<T> {
 
     private final MappingConfiguration mappingConfiguration;
 
-    abstract String keyspace();
+    public abstract String keyspace();
 
-    abstract Cluster cluster();
+    public abstract Cluster cluster();
 
     private List<T> run(String query){
         try(var session = cluster().connect()){

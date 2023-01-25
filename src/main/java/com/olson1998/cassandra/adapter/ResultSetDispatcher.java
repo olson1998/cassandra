@@ -8,12 +8,12 @@ import java.util.List;
 
 public class ResultSetDispatcher {
 
-    public static <P> P dispatch(ResultSet resultSet, TypeToken<P> producedType){
+    protected static <P> P dispatch(ResultSet resultSet, TypeToken<P> producedType){
         var column = getUniqueColumnName(resultSet);
         return resultSet.one().get(column, producedType);
     }
 
-    public static <P> List<P> dispatchList(ResultSet resultSet, TypeToken<P> producedType){
+    protected static <P> List<P> dispatchList(ResultSet resultSet, TypeToken<P> producedType){
         var args = new ArrayList<P>();
         var column = getUniqueColumnName(resultSet);
         resultSet.forEach(row -> {
