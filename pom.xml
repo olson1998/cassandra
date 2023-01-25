@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.olson1998</groupId>
-    <artifactId>cassandra</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>cassandra-utils</artifactId>
+    <version>0.0.1</version>
 
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
