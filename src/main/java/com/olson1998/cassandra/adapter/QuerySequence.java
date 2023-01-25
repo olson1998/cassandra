@@ -53,6 +53,10 @@ public class QuerySequence<D> {
         return new DefaultNextQuery<>(null, session, defaultMapper);
     }
 
+    public NextQuery<Void, D> start(){
+        return new DefaultNextQuery<>(null, session, defaultMapper);
+    }
+
     protected QuerySequence(Session session, Mapper<D> defaultMapper) {
         this.session = session;
         this.defaultMapper = defaultMapper;
